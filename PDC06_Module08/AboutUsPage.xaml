@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.AboutUsPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="0" Spacing="0" BackgroundColor="#212121">
+
+                <Label Text="About the App"  TextColor="#1db954" FontSize="35" Margin="0,0,0,10" HorizontalTextAlignment="Center">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Hanson-Bold.otf#Hanson-Bold" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                
+                <ContentView>
+                    <Frame Padding="0" CornerRadius="0" HasShadow="False">
+                        <Image Source="aboutus.png" Aspect="AspectFill" HeightRequest="300" WidthRequest="300" />
+                    </Frame>
+                </ContentView>
+
+                <Label Text="Welcome to the Student Records Mobile App – a cutting-edge solution designed to revolutionize the management of student information, academic performance, and attendance records. Our project is a testament to the collaborative efforts of a dedicated team comprising a Project Manager, UI/UX Designer, Developer, and System Analyst. Together, we bring you a user-centric application that seamlessly integrates innovative features to enhance the educational experience."
+                   FontSize="20"
+                   TextColor="#EEF0EE"
+                   Margin="0,0,0,30"
+                   HorizontalTextAlignment="Center">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Greenhouse-Regular.otf#Greenhouse-Regular" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <StackLayout>
+                    <Label Text="Team Members"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#1db954"
+                        HorizontalOptions="Center"
+                        Margin="0,10,0,5" 
+                        />
+
+                    <Label Text="Basilio, Stephanie"
+                        FontSize="18"
+                        TextColor="#EEF0EE"
+                        HorizontalOptions="Center" />
+                    <Label Text="Capuno, Frankie"
+                        FontSize="18"
+                        TextColor="#EEF0EE"
+                        HorizontalOptions="Center" />
+                    <Label Text="Musni Dan Isidrei"
+                        FontSize="18"
+                        TextColor="#EEF0EE"
+                        HorizontalOptions="Center" />
+                    <Label Text="Yabut, Micoh Jomarie"
+                        FontSize="18"
+                        TextColor="#EEF0EE"
+                        HorizontalOptions="Center" />
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.UpdatePage">
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20" >
+            <!-- Add some spacing -->
+            <Entry x:Name="xID" IsReadOnly="True" Margin="0,0,0,10"></Entry>
+            <Entry x:Name="xName" Placeholder="Name" Margin="0,0,0,10"></Entry>
+            <Entry x:Name="xRollNumber" Placeholder="Roll Number" Margin="0,0,0,10"></Entry>
+            <Entry x:Name="xAge" Placeholder="Age" Margin="0,0,0,10"></Entry>
+            <Entry x:Name="xEmail" Placeholder="Email" Margin="0,0,0,10"></Entry>
+
+            <StackLayout Orientation="Horizontal">
+                <!-- Add a Cancel button -->
+                <Button Clicked="OnCancel" Text="Cancel" BackgroundColor="#B0B0B0" TextColor="White" HorizontalOptions="FillAndExpand" Margin="0,0,5,0"/>
+                <!-- Add Update button with a nice color -->
+                <Button Clicked="OnUpdate" Text="Update" BackgroundColor="#4CAF50" TextColor="White" HorizontalOptions="FillAndExpand" Margin="5,0,0,0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.AddAcademicHistoryPage">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20" BackgroundColor="#212121">
+            <ContentView>
+                <Frame Padding="0" CornerRadius="0" HasShadow="False">
+                    <Image Source="addacademichistory.png" Aspect="AspectFill" HeightRequest="350" WidthRequest="300" />
+                </Frame>
+            </ContentView>
+            <!-- Header Label -->
+            <Label Text="Add Academic Record" FontSize="25" TextColor="#1db954" Margin="0,0,0,20" HorizontalTextAlignment="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="Hanson-Bold.otf#Hanson-Bold" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <!-- Entry fields for academic history record -->
+            <Entry x:Name="studentNameEntry" Placeholder="Student Name" Margin="0,0,0,10" PlaceholderColor="#1db954" TextColor="#1db954"/>
+            <Entry x:Name="studentIdEntry" Placeholder="Student ID" Margin="0,0,0,10" Keyboard="Numeric" PlaceholderColor="#1db954" TextColor="#1db954" />
+            <Entry x:Name="yearLevelEntry" Placeholder="Year Level" Margin="0,0,0,10" Keyboard="Numeric" PlaceholderColor="#1db954" TextColor="#1db954" />
+            <Entry x:Name="yearEntry" Placeholder="Academic Year" Margin="0,0,0,10" Keyboard="Numeric"  PlaceholderColor="#1db954" TextColor="#1db954"/>
+            <Entry x:Name="degreeEntry" Placeholder="Degree" Margin="0,0,0,10" PlaceholderColor="#1db954" TextColor="#1db954" />
+            <Entry x:Name="universityEntry" Placeholder="University" Margin="0,0,0,10"  PlaceholderColor="#1db954" TextColor="#1db954"/>
+            <Entry x:Name="majorEntry" Placeholder="Major" Margin="0,0,0,10" PlaceholderColor="#1db954" TextColor="#1db954" />
+            <Entry x:Name="gpaEntry" Placeholder="GPA" Margin="0,0,0,20" Keyboard="Numeric" PlaceholderColor="#1db954" TextColor="#1db954" />
+
+            <!-- Button to add academic record -->
+            <Button Text="➕" Clicked="OnAddAcademicRecordClicked" BackgroundColor="#1db954" TextColor="White" CornerRadius="15" HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

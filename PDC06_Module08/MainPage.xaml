@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.MainPage">
+
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#212121" >
+        <ContentView>
+            <Frame Padding="0" CornerRadius="0" HasShadow="False">
+                <Image Source="logo12.png" Aspect="AspectFill" HeightRequest="435" WidthRequest="0" />
+            </Frame>
+        </ContentView>
+
+        <Label Text="Welcome to Connect Danes" FontSize="35" TextColor="#1db954" Margin="0,0,0,10" HorizontalTextAlignment="Center">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="Hanson-Bold.otf#Hanson-Bold" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+
+        <Label Text="Seamless Learning, Effortless Management: Unleashing the Future with Student Records App."
+           FontSize="16"
+           TextColor="#757575"
+           Margin="0,0,0,30"
+           HorizontalTextAlignment="Center">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="Greenhouse-Regular.otf#Greenhouse-Regular" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+        <Button Grid.Row="2" Text="Student Records" Clicked="ViewStudentRecords_Clicked" CornerRadius="20" WidthRequest="200" />
+        <Button Grid.Row="3" Text="Attendance Records" Clicked="OnAttendanceButtonClicked" BackgroundColor="#1db954" TextColor="White" CornerRadius="20" WidthRequest="200" />
+        <Button Grid.Row="4" Text="Academic History" Clicked="OnViewAcademicHistoryClicked" CornerRadius="20" WidthRequest="200" />
+        <Button Grid.Row="5" Text="About the App" Clicked="AboutUs_Clicked" BackgroundColor="#1db954" TextColor="White"  CornerRadius="20" WidthRequest="200"  />
+        
+    </StackLayout>
+</ContentPage>

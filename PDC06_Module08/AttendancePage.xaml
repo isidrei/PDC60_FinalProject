@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.AttendancePage">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="20" BackgroundColor="#212121">
+        <ContentView>
+            <Frame Padding="0" HasShadow="False">
+                <Image Source="attendancerecord.png" Aspect="AspectFill" HeightRequest="200" WidthRequest="200" />
+            </Frame>
+        </ContentView>
+        <!-- Header Label -->
+        <Label Text="ATTENDANCE RECORDS" FontSize="35" TextColor="#1db954" Margin="0,0,0,10" HorizontalTextAlignment="Center">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="Hanson-Bold.otf#Hanson-Bold" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+
+        <!-- Description Label -->
+        <Label Text="Manage and Display Students' Attendance Records."
+           FontSize="16"
+           TextColor="#757575"
+           Margin="0,0,0,30"
+           HorizontalTextAlignment="Center">    
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="Greenhouse-Regular.otf#Greenhouse-Regular" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+
+        <!-- Button to navigate to AddAttendancePage.xaml -->
+        <Button Text="➕" Clicked="OnAddAttendanceClicked" HorizontalOptions="Center" Margin="0,0,0,20" CornerRadius="20" BackgroundColor="#1db954" TextColor="White" />
+
+        <!-- ListView -->
+        <ListView x:Name="attendanceListView" VerticalOptions="FillAndExpand" ItemSelected="OnAttendanceItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="#535353">
+                            <!-- Display the student name -->
+                            <Label Text="{Binding StudentName}" VerticalOptions="Center" TextColor="white"/>
+                            <!-- Display the attendance status -->
+                            <Label Text="{Binding Status}" VerticalOptions="Center" TextColor="#1db954"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.AcademicHistoryPage">
+
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="20" BackgroundColor="#212121">
+        <ContentView>
+            <Frame Padding="0" CornerRadius="0" HasShadow="False">
+                <Image Source="academichistory.png" Aspect="AspectFill" HeightRequest="250" WidthRequest="250" />
+            </Frame>
+        </ContentView>
+        <!-- Header Label -->
+        <Label Text="ACADEMIC HISTORY" FontSize="28" TextColor="#1db954" Margin="0,0,0,10" HorizontalTextAlignment="Center">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" Value="Hanson-Bold.otf#Hanson-Bold" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+
+        <!-- Description Label -->
+        <Label Text="Manage and Display Students' Academic History." TextColor="#B0B0B0" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+        <!-- Button to navigate to AddAcademicHistoryPage.xaml -->
+        <Button Text="➕" Clicked="OnAddAcademicRecordClicked" HorizontalOptions="Center" Margin="0,0,0,20" CornerRadius="20" BackgroundColor="#1db954" TextColor="White" />
+
+        <!-- ListView -->
+        <ListView x:Name="academicHistoryListView" VerticalOptions="FillAndExpand" ItemSelected="OnAcademicHistoryItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical" Padding="10" BackgroundColor="#535353" >
+                            <!-- Display the student name -->
+                            <Label Text="{Binding student_name}" VerticalOptions="Center" TextColor="#1db954"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

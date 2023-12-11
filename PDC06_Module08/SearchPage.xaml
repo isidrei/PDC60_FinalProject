@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC06_Module08.SearchPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#212121">
+            <Label x:Name="NoResultsLabel"
+                   Text="No results found."
+                   TextColor="#1db954"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   IsVisible="False" />
+
+            <Entry x:Name="xSearchBar" Placeholder="Search" PlaceholderColor="#1db954" TextColor="#1db954" TextChanged="OnSearchTextchanged"></Entry>
+
+            <StackLayout>
+                <ListView x:Name="PostListView"  ItemTapped="OnItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="15,0">
+                                    <Label Text="{Binding ID}" TextColor="#1db954" />
+                                    <Label Text="{Binding name}" TextColor="#1db954"/>
+                                    <Label Text="{Binding roll_number}" TextColor="#1db954" />
+                                    <Label Text="{Binding age}" TextColor="#1db954"/>
+                                    <Label Text="{Binding email}" TextColor="#1db954" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

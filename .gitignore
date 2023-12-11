@@ -1,0 +1,17 @@
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.ncb
+*.dll
+*.pdb
+*.idb
+*.exe
+*.log
+*.tlog
+*.lastbuildstate
+*.ipch/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+[Xx]64/
